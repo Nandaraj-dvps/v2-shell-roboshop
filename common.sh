@@ -83,14 +83,14 @@ app_restart(){
     VALIDATE $? "$app_name restarting"
 }
 
-# java_setup(){
-#     dnf install maven -y &>>$LOGS_FILE
-#     VALIDATE $? "Installing Maven"
+java_setup(){
+    dnf install maven -y &>>$LOGS_FILE
+    VALIDATE $? "Installing Maven"
 
-#     mvn clean package  &>>$LOGS_FILE
-#     mv target/shipping-1.0.jar shipping.jar 
-#     VALIDATE $? "Installing dependencies"
-# }
+    mvn clean package  &>>$LOGS_FILE
+    mv target/shipping-1.0.jar shipping.jar 
+    VALIDATE $? "Installing dependencies"
+}
 
 # python_setup(){
 #     dnf install python3 gcc python3-devel -y &>>$LOGS_FILE
